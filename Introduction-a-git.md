@@ -6,7 +6,7 @@
 
 ### 01 - Commit
 
-Comme Git est un logiciel de gestion de versions, il utilise des états - appelés `commits` - du code source pour suivre la différentes versions.
+Comme Git est un logiciel de gestion de versions, il utilise des états du code source pour suivre les différentes versions. On les appelles `commits`.
 Chacun de ces `commits` est identifié par une chaîne de caractère unique générée par l'algorithme `SHA-1`. Cela donnerait par exemple : `88c2656ff484858dc7e3a3a91e115b0d9d4bf2ad`.
 Un `commit` représente un état du code source. C'est-à-dire une certaine structuration de la base de code et du contenu de ses fichiers.
 Il s'agit d'un état indépendant qui n'a besoin d'aucun autre objet (au sens Git) pour exister. Cela veut dire qu'un commit n'est pas intrinsèquement lié à une branche (`branch`), à un `tag` ou à tout autre objet.
@@ -75,9 +75,13 @@ Pour comprendre la zone de transit se référer à la partie liée aux commandes
 Pour initialiser un nouveau référentiel local il suffit de lancer les commandes suivantes :
 
 `git init` <= Cette commande va créer un dossier `.git` contenant l'ensemble des fichiers nécessaires au fonctionnement du référentiel. C'est théoriquement la seule commande obligatoire.
+
 `git add .` <= Cette commande va ajouter l'ensemble des **_fichiers et dossiers contenant des fichiers_** autres que `.git` à la zone de transit.
+
 `git commit -m "Initialization"` <= Cette commande va permettre de récupérer les fichiers placés en zone de transit pour les agrégés en un `commit`.
+
 `git remote add origin <remote_reference>` <= Cette commande permet de déclarer que nous souhaite utiliser un nouveau `repo` dont la référence est `<remote_reference>` pour ce référentiel.
+
 `git push -u origin <branch>` <= Cette commande permet d'envoyer le `commit` précédemment créé localement vers le `repo`. Il est nécessaire d'utiliser l'argument `-u` pour spécifier la branche sur laquelle nous souhaitons intégrer notre `commit`.
 
 ### git add
