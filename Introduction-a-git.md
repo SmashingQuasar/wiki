@@ -91,11 +91,13 @@ L'argument `<path>` est relatif à l'emplacement de lancement de la commande.
 
 Admettons une structure de dossiers telle que :
 
+```
 /-|
   |-.git
   |-src/---------|main/         
   |-build        |public/-------|frontend.js
   |-README.md    |app.js        |style.css
+```
 
 Si nous lançons la commande `git add .` dans le dossier `src` alors `app.js` et le dossier `public` seront ajoutés mais pas le dossier `main`. Ce dernier ne contenant aucun fichier il ne sera pas ajouté à la zone de transit.
 Comme expliqué précédemment, seuls les dossiers contenant des fichiers peuvent être référencés.
